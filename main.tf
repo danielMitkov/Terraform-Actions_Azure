@@ -23,6 +23,7 @@ resource "azurerm_service_plan" "task_board" {
   resource_group_name = var.resource_group_name
   os_type             = "Linux"
   sku_name            = "F1"
+  depends_on = [azurerm_resource_group.task_board]
 }
 
 resource "azurerm_linux_web_app" "task_board" {
