@@ -52,6 +52,7 @@ resource "azurerm_mssql_server" "task_board" {
   version                      = "12.0"
   administrator_login          = var.sql_admin_login
   administrator_login_password = var.sql_admin_password
+  depends_on = [azurerm_resource_group.task_board]
 }
 
 resource "azurerm_mssql_database" "task_board" {
