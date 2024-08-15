@@ -23,7 +23,7 @@ resource "azurerm_service_plan" "task_board" {
   resource_group_name = var.resource_group_name
   os_type             = "Linux"
   sku_name            = "F1"
-  depends_on = [azurerm_resource_group.task_board]
+  depends_on          = [azurerm_resource_group.task_board]
 }
 
 resource "azurerm_linux_web_app" "task_board" {
@@ -52,7 +52,7 @@ resource "azurerm_mssql_server" "task_board" {
   version                      = "12.0"
   administrator_login          = var.sql_admin_login
   administrator_login_password = var.sql_admin_password
-  depends_on = [azurerm_resource_group.task_board]
+  depends_on                   = [azurerm_resource_group.task_board]
 }
 
 resource "azurerm_mssql_database" "task_board" {
