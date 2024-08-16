@@ -11,4 +11,4 @@ sql_admin_password = "@Aa123456789!"
 
 firewall_rule_name = "TaskBoardFirewallRule"
 
-repo_URL = "https://github.com/danielMitkov/TaskBoardNew"
+repo_URL = "https://github.com/danielMitkov/SoftUniBazar"
